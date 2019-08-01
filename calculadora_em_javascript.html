@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+		@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+        body{
+            background-color: #155bc5;
+            color: #f0f0f0;
+            font-size: 10pt ;
+            font-family: 'Michroma', sans-serif;;
+        }
+        div#area{
+            background: #058596;
+            width: 250px;
+            height: 500px;
+            text-align: center;
+            margin: auto auto;
+        }
+        input{
+            padding: 5px;
+            margin: 15px auto;
+			text-align:center;
+        }
+		.calcular{
+			color: #000;
+			height: 25px;
+			line-height: 1.0;
+			background: #c2cdd8;
+			border: 0px;
+			font-size: small;
+		}
+		#resultado{ 
+			margin: auto;
+			background: #fff;
+			width: 230px;
+			height: 100px;
+			color: #000;
+		}
+		select{
+			height: 25px;
+		}
+    </style>
+</head>
+<body>
+    <div id="area" name="area">
+        <h5>CALCULANDO VALORES...</h5>
+        <input type="number" name="textn1" id="txtn1" placeholder="Primeiro Valor">
+        <input type="number" name="textn2" id="txtn2" placeholder="Segundo Valor">
+        <div id="resultado" name="resultado">Resultado</div>
+		<br>
+        <label for="operacao">Selecione a operação:</label>
+        <select type="number" name="operacao" id="operacao">
+                <option value="Soma">Adição</option>
+                <option value="Sutração">Subtração</option>
+                <option value="Multiplicação">Multiplicação</option>
+                <option value="Divisão">Divisão</option>
+        </select>
+
+        <input class="calcular" name="calcular" type="button" value="Calcular" onclick="calcular()">
+        
+    </div>
+    
+    <script>
+        function calcular(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var tn3 = window.document.getElementById('operacao')
+            var resultado = window.document.getElementById('resultado')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = String(tn3.value)
+            if (n3 == "Soma"){
+                var s = n1 + n2}
+            if(n3 == 'Sutração'){
+                var s = n1 - n2}
+            if (n3 == 'Multiplicação'){
+                var s = n1 * n2}
+            if(n3 == 'Divisão'){
+                var s = n1 / n2}
+
+            resultado.innerHTML = `A ${n3} entre os valores é igual a ${s}`}
+    </script>
+</body>
+</html>
