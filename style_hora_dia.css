@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(12, 114, 161);
+    font: 15pt Calibri;
+    
+}
+header{
+    text-align: center;
+    color: #000;
+    background: #fff;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+
+}
+section{
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    background-color: rgba(240, 248, 255, 0.534);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.322);
+    text-align: center;
+
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+}
+#msg{
+   padding: 5px;
+   font-family: Calibri;
+}
+
+
+img{
+    border-radius: 250px;
+}
